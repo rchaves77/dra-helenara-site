@@ -1,0 +1,583 @@
+/* Variáveis de Cores para facilitar a manutenção */
+:root {
+    --primary-color: #008B8B; /* Verde água */
+    --background-white: #FFFFFF;
+    --soft-details: #A7D5D5;
+    --light-gray: #F6F6F6;
+    --main-text-color: #333333;
+    --footer-text-color: #666666;
+    --shadow-light: rgba(0, 0, 0, 0.08); /* Sombra mais leve */
+    --shadow-medium: rgba(0, 0, 0, 0.12); /* Sombra média */
+}
+
+/* Reset Básico para remover margens e paddings padrão do navegador */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Fonte padrão para o corpo do texto */
+    color: var(--main-text-color);
+    line-height: 1.6;
+    background-color: var(--background-white);
+    -webkit-font-smoothing: antialiased; /* Suaviza a renderização da fonte no WebKit */
+    -moz-osx-font-smoothing: grayscale; /* Suaviza a renderização da fonte no Firefox */
+}
+
+/* Estilo para títulos */
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-top: 0; /* Remove margem superior padrão */
+    margin-bottom: 20px; /* Espaçamento abaixo dos títulos */
+}
+
+/* Fontes específicas para cada elemento conforme as especificações */
+h1 {
+    font-family: 'Allura', cursive; /* Ou 'Sacramento' */
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 15px; /* Ajuste de espaçamento */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Sombra suave para o título */
+}
+
+.hero-section p {
+    font-family: 'Montserrat Light', sans-serif;
+    font-size: 20px;
+    color: var(--main-text-color);
+    margin-bottom: 40px; /* Mais espaçamento antes dos botões */
+}
+
+h2 {
+    font-family: 'Lora Bold', serif;
+    font-size: 32px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 50px; /* Mais espaçamento para os títulos de seção */
+}
+
+/* Tamanho de fonte menor para títulos de Depoimentos e Contato */
+.testimonials-section h2, .contact-section h2 {
+    font-size: 28px;
+}
+
+.about-text p, .about-text ul li {
+    font-family: 'Montserrat Regular', sans-serif;
+    font-size: 18px;
+    color: var(--main-text-color);
+}
+
+.service-card h3, .service-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: var(--main-text-color);
+}
+
+.testimonial-card p {
+    font-family: 'Allura', cursive; /* Ou 'Sacramento' */
+    font-size: 30px;
+    color: var(--main-text-color);
+    text-align: center;
+    line-height: 1.8; /* Melhorar legibilidade de textos cursivos */
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: 'Montserrat Regular', sans-serif;
+    font-size: 16px;
+    color: var(--main-text-color);
+}
+
+footer p, footer a {
+    font-family: 'Montserrat Light', sans-serif;
+    font-size: 14px;
+    color: var(--footer-text-color);
+}
+
+
+/* Layout Geral e Padding para seções */
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 0 20px; /* Padding horizontal para evitar que o conteúdo cole nas bordas */
+}
+
+.section-padding {
+    padding: 100px 0; /* Mais padding vertical para espaçamento entre seções */
+}
+
+/* Estilo para o Botão de Ação */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--background-white);
+    padding: 15px 35px; /* Mais padding para botões */
+    border-radius: 30px; /* Borda arredondada */
+    text-decoration: none; /* Remove sublinhado do link */
+    font-family: 'Montserrat Bold', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Transições suaves */
+    border: none; /* Garante que não haja borda padrão para botões */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    margin-top: 20px; /* Espaçamento entre botões */
+    box-shadow: 0 4px 8px var(--shadow-light); /* Sombra suave */
+}
+
+.btn-primary:hover {
+    background-color: #006666; /* Tom mais escuro do verde no hover */
+    transform: translateY(-2px); /* Leve elevação no hover */
+    box-shadow: 0 6px 12px var(--shadow-medium); /* Sombra mais pronunciada no hover */
+}
+
+/* Estilo para o novo botão Gemini */
+.btn-gemini {
+    margin-left: 20px; /* Espaçamento entre os botões */
+}
+
+/* Estilo da Área de Reflexão Gerada */
+.reflection-output {
+    background-color: var(--background-white);
+    border: 1px solid var(--soft-details);
+    border-radius: 10px;
+    padding: 25px; /* Mais padding */
+    margin-top: 40px; /* Mais espaçamento superior */
+    max-width: 650px; /* Largura um pouco maior */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px var(--shadow-light); /* Sombra suave */
+    min-height: 90px; /* Altura mínima para o conteúdo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat Light', sans-serif;
+    font-size: 18px;
+    color: var(--main-text-color);
+    transition: all 0.3s ease; /* Transição para mudanças de conteúdo */
+}
+
+.reflection-output p {
+    margin: 0; /* Remove margem padrão do parágrafo */
+}
+
+.reflection-output .loading-indicator {
+    font-style: italic;
+    color: #888;
+}
+
+.reflection-output .error-message {
+    color: #d9534f; /* Cor vermelha para mensagens de erro */
+    font-weight: bold;
+}
+
+
+/* Header e Navegação */
+header {
+    background-color: var(--background-white);
+    padding: 15px 0; /* Ajuste de padding para o cabeçalho */
+    box-shadow: 0 2px 10px var(--shadow-light); /* Sombra mais visível para o cabeçalho */
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+    top: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.header-content-wrapper {
+    display: flex;
+    justify-content: space-between; /* Alinha logo à esquerda e nav à direita */
+    align-items: center; /* Centraliza verticalmente */
+    /* O padding lateral já é definido pelo .container */
+}
+
+.header-logo {
+    height: 60px; /* Altura do logo */
+    width: auto; /* Mantém a proporção */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    /* Não precisa de margin-right aqui, pois o justify-content: space-between já cria o espaço */
+}
+
+nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Usa flexbox para alinhar os itens da navegação */
+    /* justify-content: flex-end; -- não é necessário, o pai já faz o space-between */
+}
+
+nav ul li {
+    margin: 0 25px; /* Mais espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+}
+
+nav ul li a:hover {
+    color: var(--soft-details); /* Muda a cor no hover */
+    transform: translateY(-2px); /* Leve elevação no hover */
+}
+
+/* Estilo da Seção HOME */
+.hero-section {
+    /* Fundo removido, agora a seção é transparente ou herda o branco do body */
+    background-color: var(--background-white); /* Garante um fundo branco */
+    min-height: 80vh; /* Altura mínima da seção aumentada */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    text-align: center;
+    position: relative;
+    flex-direction: column; /* Alinha o conteúdo em coluna para facilitar o espaçamento */
+    padding: 40px 20px; /* Padding para garantir que o conteúdo não cole nas bordas */
+}
+
+/* O overlay branco suave (::before) foi removido, pois não há imagem de fundo */
+/* .hero-section::before { ... } - REMOVIDO */
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique acima do overlay (se houvesse) */
+    padding: 30px; /* Mais padding interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para o conteúdo */
+    border-radius: 15px; /* Bordas arredondadas para o conteúdo */
+    box-shadow: 0 8px 20px var(--shadow-medium); /* Sombra mais pronunciada */
+}
+
+/* Estilo da Seção SOBRE A DRA. HELENARA */
+.about-container {
+    display: flex;
+    flex-direction: column; /* Coluna por padrão (para mobile) */
+    align-items: center; /* Centraliza itens */
+    gap: 50px; /* Mais espaçamento entre a imagem e o texto */
+    text-align: center;
+}
+
+.profile-pic {
+    width: 220px; /* Tamanho da imagem um pouco maior */
+    height: 220px;
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    border: 6px solid var(--primary-color); /* Borda colorida mais grossa */
+    box-shadow: 0 6px 15px var(--shadow-medium); /* Sombra mais pronunciada */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.profile-pic:hover {
+    transform: scale(1.03); /* Leve zoom no hover */
+}
+
+.about-text {
+    max-width: 800px;
+    padding: 0 15px; /* Padding para texto em telas menores */
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px; /* Mais espaçamento */
+    text-align: left; /* Alinha os bullet points à esquerda */
+}
+
+.about-text ul li {
+    margin-bottom: 12px; /* Mais espaçamento entre os itens */
+    position: relative;
+    padding-left: 25px; /* Espaço para o marcador customizado */
+}
+
+.about-text ul li::before {
+    content: '•'; /* Marcador de lista customizado */
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Estilo da Seção SERVIÇOS */
+.services-section {
+    background-color: var(--light-gray); /* Fundo cinza claro */
+    text-align: center;
+}
+
+.service-cards-container {
+    display: grid; /* Usa grid para os cards */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas responsivas */
+    gap: 35px; /* Mais espaçamento entre os cards */
+    margin-top: 50px;
+}
+
+.service-card {
+    background-color: var(--background-white);
+    padding: 35px; /* Mais padding */
+    border-radius: 20px; /* Borda arredondada */
+    box-shadow: 0 6px 15px var(--shadow-light); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-8px); /* Elevação mais pronunciada no hover */
+    box-shadow: 0 10px 25px var(--shadow-medium); /* Sombra mais forte no hover */
+}
+
+/* Estilo para as novas imagens nos cards de serviço */
+.service-card .service-real-image {
+    width: 100px; /* Largura da imagem */
+    height: 100px; /* Altura da imagem */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    margin-bottom: 25px; /* Espaçamento abaixo da imagem */
+    border: 3px solid var(--primary-color); /* Borda ao redor da imagem */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.service-card:hover .service-real-image {
+    transform: scale(1.05); /* Leve zoom na imagem no hover */
+}
+
+
+/* Remove o estilo do SVG caso ele ainda esteja presente, para evitar conflito */
+.service-card .service-icon {
+    display: none; /* Esconde os SVGs antigos, se houver */
+}
+
+
+/* Estilo da Seção DEPOIMENTOS */
+.testimonials-section {
+    background-color: var(--background-white);
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Tamanho mínimo um pouco maior */
+    gap: 35px; /* Mais espaçamento */
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background-color: var(--background-white);
+    padding: 40px; /* Mais padding */
+    border-radius: 15px; /* Borda arredondada */
+    box-shadow: 0 4px 12px var(--shadow-light); /* Sombra suave */
+    position: relative;
+    padding-top: 70px; /* Espaço para as aspas */
+    min-height: 150px; /* Altura mínima aumentada */
+    display: flex;
+    flex-direction: column; /* Conteúdo em coluna */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); /* Leve elevação no hover */
+    box-shadow: 0 8px 20px var(--shadow-medium); /* Sombra mais forte no hover */
+}
+
+/* Aspas estilizadas antes do texto */
+.testimonial-card::before {
+    content: "“"; /* Aspas de abertura */
+    font-family: Georgia, serif; /* Uma fonte serifada para aspas */
+    font-size: 90px; /* Aspas maiores */
+    color: var(--soft-details);
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    line-height: 1;
+    opacity: 0.7; /* Leve transparência */
+}
+
+/* Aspas estilizadas depois do texto */
+.testimonial-card::after {
+    content: "”"; /* Aspas de fechamento */
+    font-family: Georgia, serif;
+    font-size: 90px; /* Aspas maiores */
+    color: var(--soft-details);
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    line-height: 1;
+    opacity: 0.7; /* Leve transparência */
+}
+
+/* Estilo da Seção CONTATO */
+.contact-section {
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column; /* Para empilhar WhatsApp e E-mail */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    gap: 15px; /* Espaçamento entre WhatsApp e E-mail */
+    max-width: 400px; /* Limita a largura para melhor leitura */
+    margin: 40px auto 0 auto; /* Centraliza o container na seção */
+    padding: 20px;
+    background-color: var(--background-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre ícone e texto */
+    font-size: 19px;
+    color: var(--main-text-color);
+    /* Removido o display: flex do p.contact-item para evitar o problema de quebra de linha */
+    /* O display: flex será aplicado diretamente no .contact-info-container para alinhar os itens */
+}
+
+.contact-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    color: #006666;
+}
+
+.contact-icon {
+    width: 24px; /* Tamanho do ícone */
+    height: 24px;
+    color: var(--primary-color); /* Cor do ícone */
+    flex-shrink: 0; /* Impede que o ícone encolha */
+}
+
+/* Estilo do Rodapé */
+footer {
+    background-color: var(--background-white);
+    padding: 40px 0; /* Mais padding */
+    text-align: center;
+    border-top: 1px solid #eee; /* Linha divisória no topo do rodapé */
+}
+
+.footer-content p {
+    margin: 8px 0; /* Mais espaçamento */
+    color: var(--footer-text-color);
+}
+
+.footer-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+    color: #006666;
+}
+
+.legal-notice {
+    margin-top: 25px; /* Mais espaçamento */
+    padding-top: 20px; /* Mais padding */
+    border-top: 1px dashed #ddd; /* Linha tracejada para o aviso legal */
+    font-size: 13px; /* Fonte um pouco menor para o aviso */
+    color: #888; /* Cor mais suave */
+}
+
+/* Responsividade para diferentes tamanhos de tela */
+@media (min-width: 768px) {
+    /* Para telas maiores que 768px (tablets e desktops) */
+    .about-container {
+        flex-direction: row; /* Alinha a imagem e o texto lado a lado */
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .service-cards-container {
+        grid-template-columns: repeat(2, 1fr); /* Ajuste para 2 colunas em telas maiores para 4 cards */
+        /* Se preferir 4 colunas em desktop e houver espaço suficiente, mude para repeat(4, 1fr); */
+    }
+
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para os depoimentos */
+    }
+
+    /* A seção de contato agora usa .contact-info-container para layout flex */
+    .contact-info-container {
+        flex-direction: row; /* Alinha WhatsApp e E-mail lado a lado em telas maiores */
+        justify-content: center;
+        gap: 40px; /* Mais espaçamento entre eles */
+        max-width: none; /* Remove limite de largura para a linha */
+        width: auto; /* Ajusta largura automaticamente */
+        margin: 40px auto 0 auto; /* Centraliza o container na seção */
+    }
+
+    .contact-item {
+        /* Garante que ícone e texto fiquem na mesma linha dentro do item de contato */
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Para telas menores que 767px (celulares) */
+    h1 {
+        font-size: 36px;
+    }
+    .hero-section p {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    nav ul {
+        flex-direction: column; /* Menu de navegação em coluna */
+        gap: 10px;
+    }
+    nav ul li {
+        margin: 0;
+    }
+    .about-container {
+        flex-direction: column; /* Imagem e texto em coluna */
+        align-items: center;
+    }
+    .service-cards-container,
+    .testimonial-grid {
+        grid-template-columns: 1fr; /* Apenas 1 coluna para cards e depoimentos */
+    }
+    /* O contact-info-container já está configurado para coluna por padrão */
+    .contact-info-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin-top: 30px;
+    }
+    .btn-gemini {
+        margin-left: 0; /* Remove margem lateral em telas pequenas */
+        margin-top: 15px; /* Adiciona margem superior para espaçamento */
+    }
+    .hero-content {
+        padding: 20px; /* Reduz padding em telas pequenas */
+    }
+    .header-content-wrapper {
+        flex-direction: column; /* Logo e navegação em coluna */
+        gap: 15px; /* Espaçamento entre eles */
+    }
+    .header-logo {
+        margin-right: 0; /* Remove margem lateral do logo */
+    }
+    nav ul {
+        width: 100%; /* Ocupa toda a largura disponível */
+        justify-content: center; /* Centraliza os itens do menu */
+    }
+}
