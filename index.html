@@ -5,12 +5,15 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Dra. Helenara Chaves - Neuropsicóloga</title>
     <link href="style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Montserrat:wght@300;400;700&amp;family=Lora:wght@700&amp;family=Sacramento&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Montserrat:wght@300;400;700&amp;family=Lora:wght@400;700&amp;family=Sacramento&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header>
+
+    <header id="main-header">
         <div class="header-content-wrapper container">
-            <img alt="Logo Dra. Helenara Chaves" class="header-logo" onerror="this.onerror=null;this.src='https://placehold.co/150x50/3b5249/c0a975?text=LOGO';" src="logo nada.jpg"/>
+            <a href="#home">
+                <img alt="Logo Dra. Helenara Chaves" class="header-logo" onerror="this.onerror=null;this.src='https://placehold.co/150x50/3b5249/c0a975?text=LOGO';" src="logo nada.jpg"/>
+            </a>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -22,76 +25,83 @@
             </nav>
         </div>
     </header>
+
     <main>
         <section class="hero-section" id="home">
-            <div class="hero-content">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
                 <h1>Cuidar da mente é um gesto de amor.</h1>
                 <p>Atendimento especializado em neuropsicologia para crianças, adolescentes e adultos.</p>
                 <a class="btn-primary" href="#contato">Agende sua Consulta</a>
-                <button class="btn-primary btn-gemini" id="generateReflectionBtn">Gerar Reflexão ✨</button>
-                <div class="reflection-output" id="reflectionOutput">
-                    <p class="initial-reflection">Clique no botão para uma dose de inspiração diária!</p>
-                </div>
             </div>
         </section>
+
         <section class="section-padding" id="sobre">
             <div class="container about-container">
-                <img alt="Foto da Dra. Helenara Chaves" class="profile-pic" onerror="this.onerror=null;this.src='https://placehold.co/200x200/A7D5D5/008B8B?text=Dra.+Helenara';" src="images/IMG_3740.jpg"/>
+                <div class="about-image-wrapper">
+                    <img alt="Foto da Dra. Helenara Chaves" class="profile-pic" onerror="this.onerror=null;this.src='https://placehold.co/400x500/3b5249/FFFFFF?text=Dra.+Helenara';" src="images/IMG_3740.jpg"/>
+                </div>
                 <div class="about-text">
-                    <h2>Sobre mim</h2>
+                    <h2>Sobre Mim</h2>
                     <p>Sou Helenara Chaves, neuropsicóloga, dedicada a ajudar crianças, adolescentes e adultos a entenderem melhor suas dificuldades cognitivas e emocionais. Trabalho com empatia e cuidado, respeitando a individualidade de cada pessoa.</p>
                     <ul>
-                        <li>- CRP: 24/02216</li>
-                        <li>- Neuropsicologia Clínica</li>
-                        <li>- Avaliação e Intervenção Cognitiva</li>
-                        <li>- Atendimento Humanizado e Individualizado</li>
+                        <li>CRP: 24/02216</li>
+                        <li>Neuropsicologia Clínica</li>
+                        <li>Avaliação e Intervenção Cognitiva</li>
+                        <li>Atendimento Humanizado e Individualizado</li>
                     </ul>
                 </div>
             </div>
         </section>
+
         <section class="section-padding services-section" id="servicos">
             <div class="container">
                 <h2>Como posso ajudar?</h2>
                 <div class="service-cards-container">
                     <div class="service-card">
-                        <img alt="Crianças" class="service-real-image" onerror="this.onerror=null;this.src='https://placehold.co/100x100/A7D5D5/008B8B?text=Crianças';" src="2anos.jpg"/>
-                        <h3>Avaliação Neuropsicológica</h3>
+                        <img alt="Crianças" class="service-real-image" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b5249/FFFFFF?text=Crianças';" src="2anos.jpg"/>
+                        <h3>Avaliação Infantil</h3>
                         <p>Diagnóstico cognitivo e comportamental para crianças.</p>
                     </div>
                     <div class="service-card">
-                        <img alt="Adolescentes" class="service-real-image" onerror="this.onerror=null;this.src='https://placehold.co/100x100/A7D5D5/008B8B?text=Adolescentes';" src="6anos.jpg"/>
-                        <h3>Avaliação Neuropsicológica</h3>
+                        <img alt="Adolescentes" class="service-real-image" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b5249/FFFFFF?text=Adolescentes';" src="6anos.jpg"/>
+                        <h3>Avaliação de Adolescentes</h3>
                         <p>Diagnóstico cognitivo e comportamental para adolescentes.</p>
                     </div>
                     <div class="service-card">
-                        <img alt="Adultos" class="service-real-image" onerror="this.onerror=null;this.src='https://placehold.co/100x100/A7D5D5/008B8B?text=Adultos';" src="images/pexels-olha-ruskykh-6454657.jpg"/>
-                        <h3>Avaliação Neuropsicológica</h3>
+                        <img alt="Adultos" class="service-real-image" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b5249/FFFFFF?text=Adultos';" src="images/pexels-olha-ruskykh-6454657.jpg"/>
+                        <h3>Avaliação de Adultos</h3>
                         <p>Diagnóstico cognitivo e comportamental para adultos.</p>
                     </div>
                     <div class="service-card">
-                        <img alt="Idosos" class="service-real-image" onerror="this.onerror=null;this.src='https://placehold.co/100x100/A7D5D5/008B8B?text=Idosos';" src="images/pexels-rdne-7020619.jpg"/>
-                        <h3>Avaliação Neuropsicológica</h3>
+                        <img alt="Idosos" class="service-real-image" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b5249/FFFFFF?text=Idosos';" src="images/pexels-rdne-7020619.jpg"/>
+                        <h3>Avaliação de Idosos</h3>
                         <p>Diagnóstico cognitivo e comportamental para idosos.</p>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="section-padding testimonials-section" id="depoimentos">
             <div class="container">
                 <h2>O que dizem sobre o atendimento</h2>
                 <div class="testimonial-grid">
                     <div class="testimonial-card">
                         <p>"A Dra. Helenara é atenciosa e acolhedora. Recomendo!"</p>
+                        <span class="testimonial-author">- M. S., Mãe de Paciente</span>
                     </div>
                     <div class="testimonial-card">
                         <p>"Atendimento cuidadoso, fez toda a diferença na vida do meu filho."</p>
+                        <span class="testimonial-author">- R. L., Pai de Paciente</span>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="section-padding contact-section" id="contato">
             <div class="container">
                 <h2>Entre em Contato</h2>
+                <p class="contact-subtitle">Vamos conversar sobre como posso ajudar.</p>
                 <div class="contact-info-container">
                     <div class="contact-item">
                         <img src="whatsapp.png" class="contact-icon" alt="WhatsApp">
@@ -109,9 +119,9 @@
     <footer>
         <div class="container footer-content">
             <p>&copy; 2025 Dra. Helenara Chaves. Todos os direitos reservados.</p>
-            <p>Desenvolvido por <a href="https://seusiteaqui.com" target="_blank">Seu Nome</a></p>
+            <p>Desenvolvido com 🤍 por <a href="https... (teu link aqui)" target="_blank">Seu Nome</a></p>
             <div class="legal-notice">
-                <p>Conteúdo meramente demonstrativo. Este é um modelo de site, e as informações de contato e práticas de tratamento não representam uma neuropsicóloga ou clínica real. Para informações genuínas, procure um profissional habilitado.</p>
+                <p>Conteúdo meramente demonstrativo. Este é um modelo de site...</p>
             </div>
         </div>
     </footer>
