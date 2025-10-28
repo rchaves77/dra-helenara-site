@@ -1,42 +1,43 @@
-/* --- FUNÇÃO 1: ROLAGEM SUAVE (Smooth Scroll) --- */
-document.querySelectorAll('nav a[href^="#"], a[href^="#"].btn-primary').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault(); 
+// Aguarda o DOM (a página) carregar completamente
+document.addEventListener("DOMContentLoaded", function() {
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        // Calcula a posição do elemento de destino
-        const targetPosition = targetElement.offsetTop;
-        
-        // Pega a altura do cabeçalho (que é "sticky")
-        // Se a classe "scrolled" estiver presente, o header é menor
-        const header = document.getElementById('main-header');
-        const headerHeight = header.classList.contains('scrolled') ? header.offsetHeight : 110; // 110 é a altura original
-        
-        // Rola para a posição do elemento MENOS a altura do header
-        window.scrollTo({
-            top: targetPosition - headerHeight, // Desconta a altura do header
-            behavior: 'smooth'
-        });
-    });
-});
+    // Seleciona o botão hamburger e a navegação principal
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    
+    // Seleciona todos os links da navegação
+    const navLinks = document.querySelectorAll('.main-nav a');
 
-
-/* --- FUNÇÃO 2: CABEÇALHO "STICKY" (Muda ao rolar) --- */
-document.addEventListener('DOMContentLoaded', () => {
-    const header = document.getElementById('main-header');
-
-    if (header) {
-        window.addEventListener('scroll', () => {
-            // Adiciona a classe "scrolled" se o scroll for maior que 50px
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+    // Função para fechar o menu
+    function closeMenu() {
+        mainNav.classList.remove('nav-active');
+        mobileNavToggle.setAttribute('aria-expanded', 'false');
     }
 
-    // A funcionalidade da Gemini API foi removida.
+    // Adiciona um evento de "clique" ao botão
+    mobileNavToggle.addEventListener('click', function() {
+        // Verifica se o menu está ativo
+        const isNavActive = mainNav.classList.contains('nav-active');
+        
+        if (isNavActive) {
+            // Se estiver ativo, fecha o menu
+            closeMenu();
+        } else {
+            // Se estiver inativo, abre o menu
+            mainNav.classList.add('nav-active');
+            mobileNavToggle.setAttribute('aria-expanded', 'true');
+        }
+    });
+    
+    // Adiciona um evento de "clique" para CADA link do menu
+    // Isso faz o menu fechar automaticamente quando você clica em "Sobre", "Serviços", etc.
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Fecha o menu apenas se ele estiver aberto (em modo mobile)
+            if (mainNav.classList.contains('nav-active')) {
+                closeMenu();
+            }
+        });
+    });
+
 });
