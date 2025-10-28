@@ -1,200 +1,113 @@
-/* Variáveis de Cores para facilitar a manutenção */
+/* --- PALETA DE CORES SOFISTICADA --- */
 :root {
-    /* PALETA ALTAMENTE SOFISTICADA (baseada no novo logo) */
     --primary-color: #3b5249;    /* Verde-escuro/Teal do logo */
     --accent-color: #c0a975;     /* Dourado/Bege do texto do logo */
-    --background-white: #FFFFFF;
-    --light-gray: #FDFCF9;    /* Um "off-white" creme muito suave, mais quente que o cinza */
-    --soft-details: #EAEAEA;    /* Um cinza neutro para bordas leves */
-    --main-text-color: #333333;
-    --footer-text-color: #555555;
-    --shadow-light: rgba(0, 0, 0, 0.05); /* Sombras ainda mais suaves */
-    --shadow-medium: rgba(0, 0, 0, 0.10);
+    
+    --bg-white: #FFFFFF;
+    --bg-light-cream: #FDFCF9;  /* Fundo "requintado" off-white */
+    --bg-light-gray: #F5F5F5;   /* Fundo suave para secções */
+    
+    --text-dark: #2c2c2c;        /* Mais suave que preto puro */
+    --text-light: #555555;
+    
+    --border-soft: #EAEAEA;
+    --shadow-soft: rgba(0, 0, 0, 0.06);
+    
+    /* Fontes */
+    --font-body: 'Montserrat', sans-serif;
+    --font-heading: 'Lora', serif;
+    --font-display: 'Allura', cursive;
 }
 
-/* Reset Básico */
+/* --- RESET BÁSICO E TIPOGRAFIA --- */
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: var(--main-text-color);
-    line-height: 1.6;
-    background-color: var(--background-white);
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.7;
+    background-color: var(--bg-light-cream); /* Fundo "requintado" */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Estilo para títulos */
-h1, h2, h3 {
-    color: var(--primary-color);
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-/* Fontes específicas */
-h1 {
-    font-family: 'Allura', cursive;
-    font-size: 52px; /* Um pouco maior para destaque */
-    color: var(--accent-color); /* Dourado, para sofisticação */
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-.hero-section p {
-    font-family: 'Montserrat Light', sans-serif;
-    font-size: 20px;
-    color: var(--main-text-color);
-    margin-bottom: 40px;
-}
-
-h2 {
-    font-family: 'Lora Bold', serif;
-    font-size: 34px; /* Um pouco maior */
-    color: var(--primary-color); /* Verde-escuro */
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.testimonials-section h2, .contact-section h2 {
-    font-size: 30px;
-}
-
-.about-text p, .about-text ul li {
-    font-family: 'Montserrat Regular', sans-serif;
-    font-size: 18px;
-    color: var(--main-text-color);
-}
-
-.service-card h3, .service-card p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    color: var(--main-text-color);
-}
-
-.testimonial-card p {
-    font-family: 'Allura', cursive;
-    font-size: 30px;
-    color: var(--main-text-color);
-    text-align: center;
-    line-height: 1.8;
-}
-
-.contact-form input,
-.contact-form textarea {
-    font-family: 'Montserrat Regular', sans-serif;
-    font-size: 16px;
-    color: var(--main-text-color);
-}
-
-footer p, footer a {
-    font-family: 'Montserrat Light', sans-serif;
-    font-size: 14px;
-    color: var(--footer-text-color);
-}
-
-
-/* Layout Geral e Padding */
 .container {
-    max-width: 1200px;
+    max-width: 1100px; /* Layout mais contido */
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.section-padding {
-    padding: 100px 0;
+/* --- ESTILOS DE TEXTO (Tipografia Premium) --- */
+h1 {
+    font-family: var(--font-display);
+    font-size: 56px;
+    font-weight: 400;
+    color: var(--accent-color); /* H1 Dourado */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-/* * BOTÕES (Para "Gerar Desejo")
- * O botão primário agora é dourado, destacando-se como a ação principal.
- * O texto do botão é verde-escuro para criar um contraste elegante.
- */
+h2 {
+    font-family: var(--font-heading); /* Fonte Serifada (Lora) */
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+/* --- BOTÃO (Estilo Dourado) --- */
 .btn-primary {
     display: inline-block;
-    background-color: var(--accent-color); /* Dourado */
-    color: var(--primary-color); /* Texto verde-escuro */
-    padding: 15px 35px;
-    border-radius: 30px;
+    background-color: var(--accent-color);
+    color: var(--bg-white);
+    padding: 14px 38px;
+    border-radius: 50px; /* Totalmente arredondado */
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* Negrito */
+    font-family: var(--font-body);
+    font-weight: 700;
     font-size: 16px;
     transition: all 0.3s ease;
-    border: 2px solid var(--accent-color); /* Borda dourada */
+    border: 2px solid var(--accent-color);
     cursor: pointer;
     margin-top: 20px;
-    box-shadow: 0 4px 10px var(--shadow-light);
+    box-shadow: 0 5px 15px rgba(192, 169, 117, 0.3); /* Sombra dourada suave */
 }
 
-/* Efeito hover sofisticado: inverte as cores */
 .btn-primary:hover {
-    background-color: var(--background-white); /* Fundo branco */
-    color: var(--accent-color); /* Texto dourado */
-    border: 2px solid var(--accent-color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px var(--shadow-medium);
+    background-color: transparent;
+    color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(192, 169, 117, 0.4);
 }
 
-/* * Botão Secundário (Gemini)
- * Estilo "outline" (apenas contorno) para não competir com o botão principal.
- */
-.btn-gemini {
-    margin-left: 20px;
-    background-color: transparent; /* Fundo transparente */
-    color: var(--primary-color); /* Texto verde-escuro */
-    border: 2px solid var(--primary-color); /* Borda verde-escura */
-}
-
-/* Efeito hover: preenche o botão */
-.btn-gemini:hover {
-    background-color: var(--primary-color);
-    color: var(--background-white); /* Texto branco */
-    border: 2px solid var(--primary-color);
-}
-
-/* Área de Reflexão Gerada */
-.reflection-output {
-    background-color: var(--background-white);
-    border: 1px solid var(--soft-details);
-    border-radius: 10px;
-    padding: 25px;
-    margin-top: 40px;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 10px var(--shadow-light);
-    min-height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Montserrat Light', sans-serif;
-    font-size: 18px;
-    color: var(--main-text-color);
-    transition: all 0.3s ease;
-}
-
-.reflection-output p {
-    margin: 0;
-}
-
-.reflection-output .loading-indicator {
-    font-style: italic;
-    color: #888;
-}
-
-.reflection-output .error-message {
-    color: #d9534f;
-    font-weight: bold;
-}
-
-
-/* Header e Navegação */
+/* --- CABEÇALHO (Efeito Sticky) --- */
 header {
-    background-color: var(--background-white);
-    padding: 15px 0;
-    box-shadow: 0 2px 10px var(--shadow-light);
-    position: sticky;
+    width: 100%;
+    padding: 20px 0;
+    position: sticky; /* Fica no topo */
     top: 0;
     z-index: 1000;
+    background-color: transparent; /* Começa transparente */
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+}
+
+/* Classe "scrolled" (adicionada via JS) */
+header.scrolled {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 15px var(--shadow-soft);
+    padding: 15px 0;
 }
 
 .header-content-wrapper {
@@ -203,16 +116,17 @@ header {
     align-items: center;
 }
 
-/* * AJUSTE DO LOGO
- * Como o novo logo é horizontal, ajustamos a altura máxima (max-height)
- * e largura máxima (max-width) para ele se encaixar bem.
- */
 .header-logo {
-    height: auto; /* Altura automática para manter proporção */
-    max-height: 80px; /* Altura máxima para não ficar gigante */
-    max-width: 300px; /* Largura máxima para o logo */
+    height: auto;
+    max-height: 70px; /* Ajuste para o logo horizontal */
+    max-width: 280px;
     width: auto;
-    object-fit: contain; /* Garante que o logo caiba sem distorcer */
+    object-fit: contain;
+    transition: max-height 0.4s ease;
+}
+
+header.scrolled .header-logo {
+    max-height: 60px; /* Logo fica um pouco menor ao rolar */
 }
 
 nav ul {
@@ -223,115 +137,123 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 25px;
+    margin: 0 20px;
 }
 
-/* * MENU SOFISTICADO
- * Cor dos links é o verde-escuro.
- * Adicionamos um efeito de sublinhado animado em dourado.
- */
 nav ul li a {
     text-decoration: none;
     color: var(--primary-color);
-    font-weight: bold;
-    font-size: 17px;
-    transition: color 0.3s ease;
-    position: relative; /* Necessário para o sublinhado animado */
-    padding-bottom: 5px; /* Espaço para o sublinhado */
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 5px;
 }
 
-/* Efeito do sublinhado (inicia com 0% de largura) */
+/* Efeito sublinhado dourado */
 nav ul li a::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%; /* Começa invisível */
+    width: 0%;
     height: 2px;
-    background-color: var(--accent-color); /* Sublinhado dourado */
-    transition: width 0.4s ease; /* Animação */
+    background-color: var(--accent-color);
+    transition: width 0.4s ease;
 }
 
-nav ul li a:hover {
-    color: var(--primary-color); /* Cor do texto não muda no hover */
-}
-
-/* No hover, o sublinhado cresce para 100% */
 nav ul li a:hover::after {
     width: 100%;
 }
 
 
-/* Seção HOME */
+/* --- SECÇÃO HERO (Background Premium) --- */
 .hero-section {
-    background-color: var(--background-white);
-    min-height: 80vh;
+    height: 90vh; /* 90% da altura da janela */
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
-    flex-direction: column;
-    padding: 40px 20px;
+    padding: 0 20px;
+    /* Imagem de fundo premium - textura dourada abstrata */
+    background-image: url('https://images.pexels.com/photos/1812960/pexels-photo-1812960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito parallax */
+    margin-top: -110px; /* Puxa para baixo do header (altura do header + padding) */
+}
+
+/* Overlay escuro para legibilidade */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.6; /* Opacidade do verde-escuro */
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* Removemos o fundo semi-transparente para um look mais "clean" */
-    background-color: rgba(255, 255, 255, 0); 
-    border-radius: 15px;
-    box-shadow: none; /* Removemos a sombra da caixa de conteúdo */
+    z-index: 2;
+    max-width: 700px;
 }
 
-/* Seção SOBRE */
+.hero-content p {
+    font-size: 20px;
+    color: var(--bg-white);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+
+/* --- SECÇÕES GERAIS --- */
+.section-padding {
+    padding: 100px 0;
+}
+
+/* --- SECÇÃO SOBRE (Layout "Revista") --- */
 .about-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
-    gap: 50px;
-    text-align: center;
+}
+
+.about-image-wrapper {
+    width: 100%;
 }
 
 .profile-pic {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
     object-fit: cover;
-    /* Borda dourada, conectando com o logo */
-    border: 6px solid var(--accent-color); 
-    box-shadow: 0 6px 15px var(--shadow-medium);
-    transition: transform 0.3s ease;
+    border-radius: 8px; /* Borda suave, não circular */
+    border: 8px solid var(--bg-white);
+    box-shadow: 0 10px 30px var(--shadow-soft);
 }
 
-.profile-pic:hover {
-    transform: scale(1.03);
-}
-
-.about-text {
-    max-width: 800px;
-    padding: 0 15px;
+.about-text h2 {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .about-text ul {
     list-style: none;
     padding: 0;
     margin-top: 25px;
-    text-align: left;
 }
 
 .about-text ul li {
     margin-bottom: 12px;
     position: relative;
     padding-left: 25px;
+    font-size: 17px;
 }
 
-/* Marcador da lista (bullet point) em dourado */
+/* Marcador (bullet point) dourado */
 .about-text ul li::before {
     content: '•';
     color: var(--accent-color);
@@ -339,293 +261,220 @@ nav ul li a:hover::after {
     font-size: 1.2em;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0px;
 }
 
-/* Seção SERVIÇOS */
+/* --- SECÇÃO SERVIÇOS (Design "Clean") --- */
 .services-section {
-    background-color: var(--light-gray); /* Fundo creme suave */
-    text-align: center;
+    background-color: var(--bg-light-gray); /* Fundo cinza claro suave */
 }
 
 .service-cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 35px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 .service-card {
-    background-color: var(--background-white);
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 6px 15px var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: var(--bg-white);
+    padding: 30px;
+    border-radius: 8px;
     text-align: center;
+    border: 1px solid var(--border-soft);
+    /* O detalhe "premium" - borda superior dourada */
+    border-top: 5px solid var(--accent-color); 
+    box-shadow: none; /* Sem sombra! */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px var(--shadow-medium);
+    box-shadow: 0 15px 30px var(--shadow-soft); /* Sombra suave só no hover */
 }
 
 .service-card .service-real-image {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 25px;
-    /* Borda verde-escura, para contrastar com a foto da Dra. */
-    border: 3px solid var(--primary-color); 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    border: 3px solid var(--primary-color);
 }
 
-.service-card:hover .service-real-image {
-    transform: scale(1.05);
+.service-card p {
+    font-size: 16px;
+    color: var(--text-light);
 }
 
-.service-card .service-icon {
-    display: none;
-}
-
-
-/* Seção DEPOIMENTOS */
+/* --- SECÇÃO DEPOIMENTOS --- */
 .testimonials-section {
-    background-color: var(--background-white);
-    text-align: center;
+    background-color: var(--bg-light-cream);
 }
 
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
-    margin-top: 50px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
 .testimonial-card {
-    background-color: var(--background-white);
+    background-color: var(--bg-white);
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px var(--shadow-light);
-    position: relative;
-    padding-top: 70px;
-    min-height: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px var(--shadow-medium);
-}
-
-/* Aspas decorativas em dourado suave */
-.testimonial-card::before {
-    content: "“";
-    font-family: Georgia, serif;
-    font-size: 90px;
-    color: var(--accent-color); /* Dourado */
-    position: absolute;
-    top: 5px;
-    left: 20px;
-    line-height: 1;
-    opacity: 0.2; /* Bem suave */
-}
-
-.testimonial-card::after {
-    content: "”";
-    font-family: Georgia, serif;
-    font-size: 90px;
-    color: var(--accent-color); /* Dourado */
-    position: absolute;
-    bottom: 5px;
-    right: 20px;
-    line-height: 1;
-    opacity: 0.2; /* Bem suave */
-}
-
-/* Seção CONTATO */
-.contact-section {
-    background-color: var(--light-gray); /* Fundo creme suave */
+    border-radius: 8px;
+    border: 1px solid var(--border-soft);
     text-align: center;
+    box-shadow: 0 10px 25px var(--shadow-soft);
+}
+
+/* Texto do depoimento em Lora Italic */
+.testimonial-card p {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Autor do depoimento */
+.testimonial-author {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--accent-color); /* Autor em dourado */
+}
+
+/* --- SECÇÃO CONTATO --- */
+.contact-section {
+    background-color: var(--primary-color); /* Fundo verde-escuro */
+    color: var(--bg-white);
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: var(--bg-white); /* Título branco */
+}
+
+.contact-subtitle {
+    font-size: 18px;
+    color: var(--bg-white);
+    opacity: 0.9;
+    margin-top: -30px;
 }
 
 .contact-info-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    max-width: 400px;
-    margin: 40px auto 0 auto;
-    padding: 20px;
-    background-color: var(--background-white);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px var(--shadow-light);
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 19px;
-    color: var(--main-text-color);
+    gap: 12px;
 }
 
 .contact-item a {
-    color: var(--primary-color);
+    color: var(--bg-white);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-size: 20px;
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
 .contact-item a:hover {
-    text-decoration: underline;
     color: var(--accent-color); /* Hover dourado */
 }
 
 .contact-icon {
     width: 24px;
     height: 24px;
-    color: var(--primary-color);
-    flex-shrink: 0;
+    filter: brightness(0) invert(1); /* Deixa ícones (preto) brancos */
 }
 
-/* Rodapé */
+/* --- RODAPÉ --- */
 footer {
-    background-color: var(--background-white);
-    padding: 40px 0;
+    background-color: var(--bg-white);
+    padding: 30px 0;
     text-align: center;
-    border-top: 1px solid var(--soft-details); /* Linha divisória suave */
+    border-top: 1px solid var(--border-soft);
 }
 
 .footer-content p {
     margin: 8px 0;
-    color: var(--footer-text-color);
+    font-size: 14px;
+    color: var(--text-light);
 }
 
 .footer-content a {
     color: var(--primary-color);
     text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
 .footer-content a:hover {
-    text-decoration: underline;
-    color: var(--accent-color); /* Hover dourado */
+    color: var(--accent-color);
 }
 
 .legal-notice {
-    margin-top: 25px;
+    margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px dashed #ddd;
-    font-size: 13px;
-    color: #888;
+    border-top: 1px dashed var(--border-soft);
+    font-size: 12px;
+    color: #999;
 }
 
-/* Responsividade */
-@media (min-width: 768px) {
-    .about-container {
-        flex-direction: row;
-        text-align: left;
-        align-items: flex-start;
-    }
-
-    .about-text {
-        text-align: left;
-    }
-
-    .service-cards-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .testimonial-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-info-container {
-        flex-direction: row;
-        justify-content: center;
-        gap: 40px;
-        max-width: none;
-        width: auto;
-        margin: 40px auto 0 auto;
-    }
-
-    .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .header-content-wrapper {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    nav ul {
-        flex-direction: row;
-    }
-}
-
-@media (max-width: 767px) {
+/* --- RESPONSIVIDADE (Mobile) --- */
+@media (max-width: 768px) {
     h1 {
-        font-size: 40px; /* Ajuste para mobile */
-    }
-    .hero-section p {
-        font-size: 18px;
+        font-size: 44px;
     }
     h2 {
-        font-size: 28px;
+        font-size: 30px;
+    }
+
+    .section-padding {
+        padding: 70px 0;
     }
 
     /* Ajuste do cabeçalho para mobile */
     .header-content-wrapper {
         flex-direction: column;
-        gap: 20px; /* Mais espaço */
-    }
-    .header-logo {
-        max-width: 250px; /* Logo um pouco menor no mobile */
-        max-height: 70px;
+        gap: 15px;
     }
     nav ul {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
+        flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
     }
     nav ul li {
-        margin: 0;
-        text-align: center;
+        margin: 0 10px;
     }
-
-    .about-container {
-        flex-direction: column;
-        align-items: center;
+    nav ul li a {
+        font-size: 15px;
     }
-    .service-cards-container,
+    
+    .hero-section {
+        /* Ajusta o topo para compensar o header maior no mobile */
+        margin-top: -160px; 
+    }
+    
+    /* Layouts "Grid" viram "Stack" (coluna única) */
+    .about-container,
     .testimonial-grid {
         grid-template-columns: 1fr;
     }
-    .contact-info-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+
+    .about-text h2 {
+        text-align: center; /* Centraliza H2 no mobile */
         margin-top: 30px;
     }
-    
-    /* Botões no mobile */
-    .btn-gemini {
-        margin-left: 0;
-        margin-top: 15px;
-    }
-    .hero-content {
-        padding: 15px; /* Menos padding no mobile */
+
+    .contact-info-container {
+        flex-direction: column;
+        gap: 20px;
     }
 }
