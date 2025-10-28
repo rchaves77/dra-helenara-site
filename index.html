@@ -4,22 +4,37 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Dra. Helenara Chaves - Neuropsicóloga</title>
-    <link href="style.css" rel="stylesheet"/>
+    
     <link href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Montserrat:wght@300;400;700&amp;family=Lora:wght@400;700&amp;family=Sacramento&amp;display=swap" rel="stylesheet"/>
+    
+    <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
 
-    <header id="main-header">
+    <header class="main-header" id="main-header">
         <div class="header-content-wrapper container">
-            <a href="#home">
+            
+            <a href="#home" class="header-logo-link">
                 <img alt="Logo Dra. Helenara Chaves" class="header-logo" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b5249/c0a975?text=LOGO';" src="logo menino 2025.png"/>
+            </a>
+
+            <button class="mobile-nav-toggle" aria-controls="main-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <nav class="main-nav" id="main-navigation">
+                <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li class="nav-button"><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
@@ -27,7 +42,7 @@
         <section class="hero-section" id="home">
             <div class="hero-overlay"></div>
             <div class="hero-content container">
-                <h1>Cuidar da mente é um gesto de amor.</h1>
+                <h1 class="hero-title-script">Cuidar da mente é um gesto de amor.</h1>
                 <p>Atendimento especializado em neuropsicologia para crianças, adolescentes e adultos.</p>
                 <a class="btn-primary" href="#contato">Agende sua Consulta</a>
             </div>
@@ -116,9 +131,8 @@
     <footer>
         <div class="container footer-content">
             <p>&copy; 2025 Dra. Helenara Chaves. Todos os direitos reservados.</p>
-            <p>Desenvolvido com 🤍 por <a href="https... (teu link aqui)" target="_blank">Seu Nome</a></p>
             <div class="legal-notice">
-                <p>Conteúdo meramente demonstrativo. Este é um modelo de site...</p>
+                <p>Conteúdo meramente demonstrativo.</p>
             </div>
         </div>
     </footer>
